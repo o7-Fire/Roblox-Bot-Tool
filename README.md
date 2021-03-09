@@ -1,6 +1,10 @@
 ## Roblox-Bot-creator
 Creates roblox accounts.
 
+### How to Install
+
+pip install RobloxAccountMaker
+
 ### Note from the author
 - The project has been cancelled long ago.
 - If you want to make use of it try learning some python, it really isn't that difficult :), some resources:
