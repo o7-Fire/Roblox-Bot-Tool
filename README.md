@@ -30,4 +30,7 @@ Open python interpretter in main directory
 >>> import RobloxAccountMaker as rm
 >>> rm.setupUser("kresten123", "password", "Male", "Aug", "7", "2002")
 >>> rm.createUser()
+or
+>>> import RobloxAccountMaker as rm
+>>> rm.setupUserRandomized("password")
 ```
