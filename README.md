@@ -53,4 +53,6 @@ RobloxAccountMaker.setupUserRandomized()
 
 What it looks like:
 
-![image](https://user-images.githubusercontent.com/46597698/110476930-87f5ce00-811d-11eb-8cf2-8e230ad5c11d.png)
+![image](https://user-images.githubusercontent.com/46597698/110479626-9396c400-8120-11eb-91bd-25c8cb04e0f7.png)
+![image](https://user-images.githubusercontent.com/46597698/110479672-a01b1c80-8120-11eb-95cc-a5b65eb17192.png)
+
