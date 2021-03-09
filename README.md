@@ -27,7 +27,7 @@ The program opens a script-controlled browser that navigates to the roblox.com p
 ### How to use
 Open python interpretter in main directory
 ```
->>> import BotController as bc
->>> bc.setupUser("kresten123", "password", "Male", "Aug", "7", "2002")
->>> bc.createUser()
+>>> import RobloxAccountMaker as rm
+>>> rm.setupUser("kresten123", "password", "Male", "Aug", "7", "2002")
+>>> rm.createUser()
 ```
