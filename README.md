@@ -42,7 +42,7 @@ RobloxAccountMaker.createUser()
 RobloxAccountMaker.setupUserRandomized()
 RobloxAccountMaker.createUser()
 
-``
+```
 
 Current use:
 
