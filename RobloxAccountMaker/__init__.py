@@ -4,7 +4,6 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.chrome.options import Options
 from time import sleep as snooze
-from Debug import Log as log
 from os import path, makedirs
 from os.path import join
 import pickle
@@ -32,7 +31,7 @@ def configIni(**kwargs):
     amountOfTries = 18  #5The amount of attempts to look for a successful account creation.
     waitTime = 10  #2The amount of time in seconds till it checks again for successful account creation.
     successUrl = "roblox.com/games"  #The url that is redirected to after a successful account creation. #https://www.roblox.com/games?SortFilter=default&TimeFilter=0
-    proxyURL = "140.227.81.53:3128"
+    proxyURL = "localhost:3000"
     proxyEnabled = False
     outputFolder = "accounts"
 
@@ -88,12 +87,12 @@ def createUser():
 
     #Checks weather the registration was successful.
     CurrURL = browser.current_url
-    log(CurrURL)
+    print(CurrURL)
     tries = 0
     while not successUrl in CurrURL:
         if(tries < amountOfTries):
             CurrURL = browser.current_url
-            log("Trying again, Tries: {0}/{1}; URL: {2}".format(tries, amountOfTries, CurrURL))
+            print("Trying again, Tries: {0}/{1}; URL: {2}".format(tries, amountOfTries, CurrURL))
             snooze(waitTime)
             tries += 1
         else: break;
