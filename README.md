@@ -14,15 +14,12 @@ Knock yourself out! Good luck
 ### Planning on being added
 - Proxy support
 - Check if username is taken
-- Star, Follow, Like (Generally control bots)
 - Account Manager (other project)
 
 ### What does it do?
-The program opens a script-controlled browser that navigates to the roblox.com page, then it signs up.
-
-### Error sources and bugs
-- Captcha Confirmation (Begins popping up after you've tried a couple times with same IP/proxy)
-- Username Taken (Not handled currently)
+The program opens a script-controlled browser that navigates to the
+roblox.com page, fills in every info, and lets you click the sign up
+button and complete the captcha.
 
 ### How to use
 Open python interpretter in main directory
@@ -33,4 +30,16 @@ Open python interpretter in main directory
 or
 >>> import RobloxAccountMaker as rm
 >>> rm.setupUserRandomized("password")
+>>> rm.createUser()
 ```
+
+Current use:
+
+RobloxAccountMaker.setupUser(name, password, month, day, year)
+RobloxAccountMaker.setupUser(name)
+RobloxAccountMaker.setupUserRandomized(password)
+RobloxAccountMaker.setupUserRandomized()
+
+What it looks like:
+
+![image](https://user-images.githubusercontent.com/46597698/110476930-87f5ce00-811d-11eb-8cf2-8e230ad5c11d.png)
