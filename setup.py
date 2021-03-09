@@ -20,4 +20,4 @@ setup(
             "Intended Audience :: Education",
             "Programming Language :: Python :: 3",
             "Operating System :: Microsoft :: Windows",
-        ]
+        ])
