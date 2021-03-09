@@ -12,9 +12,10 @@ https://www.learnpython.org/
 Knock yourself out! Good luck
 
 ### Planning on being added
-- ~~Proxy support (To prevent the Captcha)~~
-- ~~Check if username is taken~~
-- ~~Star, Follow, Like (Generally control bots)~~
+- Proxy support
+- Check if username is taken
+- Star, Follow, Like (Generally control bots)
+- Account Manager (other project)
 
 ### What does it do?
 The program opens a script-controlled browser that navigates to the roblox.com page, then it signs up.
