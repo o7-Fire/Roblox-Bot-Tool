@@ -27,15 +27,22 @@ button and complete the captcha.
 
 ### How to use
 Open python interpretter in main directory
-```
->>> import RobloxAccountMaker as rm
->>> rm.setupUser("kresten123", "password", "Male", "Aug", "7", "2002")
->>> rm.createUser()
-or
->>> import RobloxAccountMaker as rm
->>> rm.setupUserRandomized("password")
->>> rm.createUser()
-```
+
+```py
+import RobloxAccountMaker
+
+RobloxAccountMaker.setupUser("name123123", "password", "Male", "Jan", "04", "1990")
+RobloxAccountMaker.createUser()
+
+#creates account with randomized name 
+RobloxAccountMaker.setupUserRandomized("password")
+RobloxAccountMaker.createUser()
+
+#creates account with randomized name and password is name
+RobloxAccountMaker.setupUserRandomized()
+RobloxAccountMaker.createUser()
+
+``
 
 Current use:
 
