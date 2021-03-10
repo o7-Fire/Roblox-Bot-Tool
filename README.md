@@ -32,7 +32,6 @@ RobloxAccountMaker.createUser()
 
 ```
 ## Proxy
-gonna be added soon but heres how it works
 
 ```py
 import RobloxAccountMaker
@@ -41,8 +40,10 @@ RobloxAccountMaker.setupUser("name123123", "password", "Male", "Jan", "04", "199
 RobloxAccountMaker.createUser(True)
 # True = enable proxy
 # if not proxy.txt, then it will create one for you
-
 ```
+![image](https://user-images.githubusercontent.com/46597698/110564811-6f6ecd80-8188-11eb-8660-124e3346dbc2.png)
+![image](https://user-images.githubusercontent.com/46597698/110564867-831a3400-8188-11eb-8afa-f166ec408703.png)
+
 
 Current use:
 
