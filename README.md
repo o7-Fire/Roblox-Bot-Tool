@@ -5,7 +5,7 @@ Creates roblox accounts.
 pip install RobloxAccountMaker
 
 ### Planning on being added
-- Proxy support
+- --Proxy support-- done
 - Check if username is taken
 - Account Manager (other project)
 
@@ -47,7 +47,7 @@ RobloxAccountMaker.createUser(True)
 
 Current use:
 
-RobloxAccountMaker.setupUser(name, password, month, day, year)
+RobloxAccountMaker.setupUser(name, password, month, day, year)\
 RobloxAccountMaker.setupUserRandomized(password)
 
 What it looks like:
