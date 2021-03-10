@@ -5,7 +5,6 @@ Creates roblox accounts.
 pip install RobloxAccountMaker
 
 ### Planning on being added
-- --Proxy support-- done
 - Check if username is taken
 - Account Manager (other project)
 
