@@ -31,6 +31,18 @@ RobloxAccountMaker.setupUserRandomized()
 RobloxAccountMaker.createUser()
 
 ```
+## Proxy
+gonna be added soon but heres how it works
+
+```py
+import RobloxAccountMaker
+
+RobloxAccountMaker.setupUser("name123123", "password", "Male", "Jan", "04", "1990")
+RobloxAccountMaker.createUser(True)
+# True = enable proxy
+# if not proxy.txt, then it will create one for you
+
+```
 
 Current use:
 
