@@ -3,6 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.proxy import Proxy, ProxyType
 from webdriver_manager.chrome import ChromeDriverManager
 from time import sleep as snooze
 from os import path, makedirs
@@ -10,6 +11,7 @@ from os.path import join
 import pickle
 import random
 import string
+import pathlib
 
 
 #Declaring and assigning globals
@@ -43,26 +45,33 @@ def configIni(**kwargs):
     proxyEnabled = False
     outputFolder = "accounts"
 
-def createUser():
+def createUser(proxy=False):
     global uname, pword, sex, bdaymonth, bdayday, bdayyear, amountOfTries, waitTime, successUrl, proxyURL, proxyEnabled;
     #executeableDriver = 'phantomjs.exe'
     chromeOptions = Options()
     #chromeOptions.add_argument("--headless")
-    '''
-    if(proxyEnabled):
-        service_args = [
-        '--proxy={}'.format(proxyURL),
-        '--proxy-type=socks5',
-        ]
+    if(proxy):
+        try:
+            f = open("proxy.txt")
+            f.close()
+            f = open("proxy.txt", "r")
+            Lines = f.read().splitlines()
+            randomproxy = random.choice(Lines)
+            print("Using proxy: " + randomproxy)
+            chrome_options = webdriver.ChromeOptions()
+            chrome_options.add_argument('--proxy-server=%s' % randomproxy)
+            browser = webdriver.Chrome(ChromeDriverManager(version="87.0.4280.88").install(), chrome_options=chrome_options)
+        except FileNotFoundError:
+            print("proxy.txt was not found. creating file...")
+            f = open("proxy.txt", "x")
+            f.close()
     else:
-        service_args = []
-        '''
-
-    browser = webdriver.Chrome(ChromeDriverManager(version="87.0.4280.88").install(), chrome_options=chromeOptions)
+        print("proxy: False")
+        browser = webdriver.Chrome(ChromeDriverManager(version="87.0.4280.88").install(), chrome_options=chromeOptions)
     #browser = webdriver.PhantomJS(executeableDriver)#,service_args=service_args
-    browser.get('https://www.roblox.com')
+    browser.get("http://roblox.com")
 
-    print("Name: {0}\nPassword :{1}\nMonth: {2}n\Day: {3}{4}\nYear: {5}".format(uname,pword,sex,bdaymonth,bdayday,bdayyear),end="", flush=True)
+    print("Name: {0}\nPassword :{1}\nGender: {2}\nMonth: {3}\nDay: {4}\nYear: {5}".format(uname,pword,sex,bdaymonth,bdayday,bdayyear),end="", flush=True)
 
     #Assigns different ids from the homepage variable names.
     usernameId = browser.find_element_by_id("signup-username")
@@ -89,8 +98,8 @@ def createUser():
     CurrURL = browser.current_url
     print("\n" +CurrURL)
 configIni()
-setupUserRandomized("testpasd")
-createUser()
+#setupUserRandomized("testpasd")
+#createUser(True)
 
 
 '''
